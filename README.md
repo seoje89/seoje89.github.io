@@ -1,3 +1,6 @@
+#### 20210512(수) 작업내역
+- 깃 pull 확인
+
 #### 20210511(화) 작업내역
 - 로렘 입숨 한글url: http://guny.kr/stuff/klorem/#/dl-html
 - 로렘 입숨 영어url: https://loremipsum.io/
