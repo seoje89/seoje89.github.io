@@ -25,5 +25,34 @@
             <tbody></tbody>
         </tr>
     </table>
+    <div id="one">헬로 자바스크립트</div>
+    <script>
+        // 변수(Variable) 요소(number-숫자, string-문자, object-객체) 사용에 대해서
+        // 데이터를 사용하는 방법: 변수가 사용 
+        // 기본형 : number(수:정수,실수-소숫점), string(문자열), boolean(참true,거짓false)
+        // 사용자정의형 : object(array 배열형), fuction(함수-메서드형)
+        var 변수1 = 100;//변수는 한글로 쓰면 안됨
+        document.write('변수타입은: ', typeof(변수1));
+        document.write('<br>');//줄바꿈 = br : break return(중지하고 엔터)
+        변수1 = '100';
+        document.write('변수타입은: ', typeof(변수1));
+        //특징 : 입력된 값에 따라서 변수 형이 결정된다.
+
+        /* 여러줄 주석 사용
+         자바스크립트부터는 프로그램이기떄문에 디버그용어 사용(에러처리)
+         자바언어부터 개발되었고, 자바스크립트와는 관계없음
+         자바스크립트는 인터프리터언어(한줄씩 위에서 아래로 해석) = 파이썬과 같은방식
+         자바는 컴파일언어(클래스단위로 해석)
+         */
+        // 한줄 주석사용, 개체(태그)선택방법, 디버그방법 , 20년 전부터 이용하던 방식
+        document.getElementById('one').innerHTML = "헬로 <h1>javascript</h1>";
+        document.getElementById('one').innerText = "헬로 <h1>javascript</h1>";
+        var debug = document.getElementById('one');
+        // window.alert(debug.innerText); 디버그하는 방법 1
+        console.log(debug);// 디버그하는 방법2 json 빅데이터확인
+        // 예전 자바스크립트를 배우는 이유는 IoT 때문에 배웁니다.
+        // IoT 임베디드프로그램에서는 jQuery를 사용 못하는 경우가 있음
+        // 위 경우 OLD(네이티브) 자바스크립트를 사용하게 된다.
+    </script>
 </body>
 </html>
