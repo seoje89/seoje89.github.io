@@ -21,6 +21,7 @@
         // jQuery CDN : Condents Delivery network - 인터넷으로 외부 프로그램을 가져다 쓰는 방식
         // jQuery 의 기본형식 : $로 시작, 문서가 준비되었을때 자동구현
         // 인터프리터의 단점 위에서부터 아래로 실행되는 순서를 신경쓰지 않아도 됨 -> jQuery의 장점.
+        // $('id선택자').click(콜백함수=무명함수=자동실행){구현내용}
         $(document).ready(function(){ 
             //html문서를 다 읽어들인 후에 {블럭}내용이 실행됨
             $('#checkValue').click(function(){
@@ -53,7 +54,7 @@
         // 여러개의 element 선택
         // var names = document.getElementById('name');
         var names = $('#name');
-        var inputName = document.getElementsByName('name');
+        var inputName = document.getElementsByName('name');//input 태그 이름
         var twoClassName = document.getElementsByClassName('two');
         //네이밍 방식: 카멜(낙타등)표기법 - 단어와 단어를 합칠때,
         //소문자로 시작, 다른 단어가 나올때 대문자로 시작, 나머지는 소문자 
