@@ -18,27 +18,70 @@
 <link rel="stylesheet" href="/home/css/mobile.css">
 <!-- 태블릿용 CSS 임포트 -->
 <link rel="stylesheet" href="/home/css/tablet.css">
+<!-- PC용 CSS 임포트 -->
 <script src="/home/js/main.js"></script>
 <!-- 메인 슬라이드 코어 임포트 -->
 <script src="/home/js/slidemain.js"></script>
 <style>
 /* 태블릿용 메인페이지 스타일 지정(아래) */
 @media all and (min-width:801px) {
-	/* 컨테이너 영역 */
-	#container {
-		padding-bottom: 20px;
-		width: auto;
-		position: inherit; /* 부모영역의 위치를 따라감*/
+	/* 전화상담과 최근공지사항 */
+	.appbbs_area {
+		padding: 60px 0px;
 	}
-	/* //컨테이너 영역 */
-
-	/* 슬라이드 영역 */
-
-	/* //슬라이드 영역*/
-
-	/* 최신 갤러리 */
-
-	/* //최신 갤러리 */
+	.appbbs_box {
+		box-sizing: border-box;
+		padding: 0px 20px;
+	}
+	.app_line {
+		display: inherit;
+		float: left;
+		width: 65%; /* 나머지 35%가 최근공지사항영역이 됨 */
+		box-sizing: border-box;
+		padding: 46px 0px;
+		background: url(./img/bg_app.jpg); /* no-repeat 가 필요없음. 단일색상이기 때문에 */
+		font-size: 0px; /* 웹 접근성(ex:시각장애인)을 위해서 존재 */
+		text-align: center;
+	}
+	.app_line a {
+		font-size: 21px;
+		display: inline-block; /* inline-block : 본인 크기만큼만 자리차지 */
+		width: 42.4%; /* 65%(app_line)영역의 42.4% 차지 */
+		height: 100px;
+		line-height: 100px;
+		box-sizing: border-box;
+		padding-left: 55px;
+		text-align: left;
+		background: rgba(0, 0, 0, 0.3) url(./img/ico_katalk.png) no-repeat 10px 50%; /* 10px : 가로위치, 50% : 세로위치(50% 이므로 가운데정렬) */
+		border: 2px solid #fff;
+		color: #fff;
+		vertical-align: middle; /* 이미지와 글자를 배치할때 글자의 위치를 뜻함, 세로가운데정렬 */
+		margin-right: 10px;
+	}
+	.app_line a + a { /* 형제(sibling) 태그영역 */
+		background-image: url(./img/ico_phone.png);
+		margin-right: 0px;
+		padding-left: 65px;
+	}
+	.bbs_line { /* 최근공지사항 영역 */ 
+		float: right;
+		width: 29%; /* 나머지 35%중 29%만 영역으로 사용, 남은 6%는 여백으로 사용 */
+		border-top: none;
+		padding: inherit;
+	}
+	.bbs_line h3 {
+		font-size: 26px;
+		font-weight: inherit; /* font-weight: 글꼴 두께 */
+	}
+	.bbs_line .notice_recent li a {
+		display: block;
+		padding-left: 14px;
+		background: url() no-repeat 0 50%;
+		overflow: hidden;
+		text-overflow: ellipsis; /* 문자열이 영역을 벗어났을때 ...으로 표시하는 명령 */
+		white-space: nowrap; /* 줄바꿈할때 단어를 기준으로 wrapping 하지 않겠다. */
+	}
+	/* //전화상담과 최근공지사항 */
 }
 	
 </style>
