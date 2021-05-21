@@ -32,10 +32,42 @@
 <link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
 <!-- 첨부파일 input태그 디자인 안쪽에 집어넣는 확장프로그램 -->
 <script src="/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
 <!-- 위 첨부파일 확장프로그램 실행(개발자가 처리) -->
 <script>
 	$(document).ready(function(){
 		bsCustomFileInput.init();
+	});
+</script>
+<!-- 서머노트 웹에디터 CSS 임포트 -->
+<link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
+<link rel="stylesheet" href="/admin/plugins/summernote/summernote.css">
+<!-- 서머노트 웹에디터 JS 임포트 -->
+<script src="/admin/plugins/summernote/summernote.min.js"></script>
+<!-- 서머노트 웹에디터 실행(개발자가 처리) -->
+<script>
+	$(document).ready(function(){
+		// $('#content_lbl').summernote(); 기본실행. 기본옵션에서 개발자가 커스터마이징 한다.
+		$('')
+		$('#content_lbl').summernote({
+			height:150,
+			lang:'ko-KR',
+			placeholder:'글 내용을 입력해 주세요',
+			toolbar: [
+				['fontname',['fontname']],
+				['fontsize',['fontsize']],
+				['style',['bold','italic','underline']],
+				['color',['forecolor','color']],
+				['table',['table']],
+				['para',['ul', 'ol', 'paragraph']],
+				['height',['height']],
+				['insert',['link', 'video']], /* 'picture */
+				['view',['fullscreen', 'help']]
+			],
+			fontNames: ['Arial', 'Arial Black', '맑은 고딕', '궁서', 'Nanum Gothic'],
+			fontSizes: ['8','10','12','14','16','18','20','22','24','26','28','30'],
+			fontNamesIgnoreCheck: ['Nanum Gothic']
+		});
 	});
 </script>
 <style>
@@ -174,36 +206,6 @@ $(document).ready(function() {
 		<!-- //메인본문영역 -->
 	</div>
     <!-- //메인콘텐츠영역 -->
-
-<!-- 서머노트 웹에디터 실행(개발자가 처리) -->
-<script>
-	$(document).ready(function(){
-		// $('#content_lbl').summernote(); 기본실행. 기본옵션에서 개발자가 커스터마이징 한다.
-		$('#content_lbl').summernote({
-			height:150,
-			lang:'ko-KR',
-			placeholder:'글 내용을 입력해 주세요',
-			fontNames: ['Arial', 'Arial Black', '맑은 고딕', '궁서'],
-			fontSizes: ['8','10','12','14','16','18','20','22','24','26','28','30'],
-			toolbar: [
-				['fontname',['fontname']],
-				['fontsize',['fontsize']],
-				['style',['bold','italic','underline']],
-				['color',['forecolor','color']],
-				['table',['table']],
-				['para',['ul', 'ol', 'paragraph']],
-				['height',['height']],
-				['insert',['link', 'video']], /* 'picture */
-				['view',['fullscreen', 'help']]
-			],
-		});
-	});
-</script>
-<!-- 서머노트 웹에디터 CSS 임포트 -->
-<link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
-<link rel="stylesheet" href="/admin/plugins/summernote/summernote.css">
-<!-- 서머노트 웹에디터 JS 임포트 -->
-<script src="/admin/plugins/summernote/summernote.min.js"></script>
 
     <!-- 푸터메뉴및사업자정보영역 -->
 	<footer>
