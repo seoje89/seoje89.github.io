@@ -328,13 +328,22 @@ $(document).ready(function() {
 <script>
 // 페이징 처리 함수형 변수(아래)
 var printPagingList = function(pageVO, target) {
+	$(target).html(''); // target의 내용만 지우고, target은 남아있음
 // pageVO = 스프링에서 받은 json데이터, 변수 3개 pageVO.prev(이전 데이터가 있다면 true), pageVO.next(다음 데이터가 있다면 true), pageVO=5페이지 가정
 	var pagination = ''; // 문자열 누적변수
 	// Previous 출력(아래)
 	pagination += '<li class="paginate_button page-item previous disabled" id="example2_previous">';
 	pagination += '<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>';
-	pagination += '</li>'; //pagination = pagination + 과 pagination += 동일(단축) 
+	pagination += '</li>'; //pagination = pagination + 과 pagination += 동일(단축)
 	// previous 출력 끝
+
+	var active = '';
+	for(var i=0; i<pageVO; i++) {
+		if(i==0) { active = 'active'; } else { active = ''; }
+		pagination += '<li class="paginate_button page-item '+active+'">';
+		pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(i+1)+'</a>';
+		pagination += '</li>';
+	}
 
 	// Next 출력(아래)
 	pagination += '<li class="paginate_button page-item next" id="example2_next">';
@@ -348,7 +357,7 @@ printPagingList(5, '.pagination');
 var printReplyList = function(data, templateData, target) {
 	var template = Handlebars.compile(templateData.html()); // 템플릿을 태그로 변환
 	var html = template(data); // 파싱처리
-	$('.div_template').remove(); // 기존 댓글 데이터 누적을 방지
+	$('.div_template').remove(); // 기존 댓글 데이터 누적을 방지, target 안쪽의 자식만 지움
 	target.prepend(html);
 };
 	$(document).ready(function(){
@@ -368,6 +377,7 @@ var printReplyList = function(data, templateData, target) {
 					// 함수의(인자=아규먼트=매개변수=파라미터)
 					// printReplyList(jsonDate, 바인딩(파싱)위치, 화면출력위치);
 					printReplyList(result, $('#template'),$('#collapseReply'));
+					printPagingList(5, '.pagination');
 				},
 				error:function(){
 					alert('RestAPI서버가 작동하지 않습니다.');
@@ -391,6 +401,7 @@ var printReplyList = function(data, templateData, target) {
 					// 함수의(인자=아규먼트=매개변수=파라미터)
 					// printReplyList(jsonDate, 바인딩(파싱)위치, 화면출력위치);
 					printReplyList(result, $('#template'),$('#collapseReply'));
+					printPagingList(6, '.pagination');
 				},
 				error:function(){
 					alert('RestAPI서버가 작동하지 않습니다.');
