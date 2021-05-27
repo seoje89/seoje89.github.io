@@ -7,7 +7,13 @@
 - VS code에서 만든 UI를 이클립스 JSP로 변경 후 스프링 웹 프로젝트를 진행.
 - 관리자단 AdminLTE적용 - 스프링작업시 회원관리CRUD, 게시판생성관리CRUD : JSP로 작업
 
-#### 20210527(목) 작업예정
+#### 20210528(금) 작업예정
+- 관리자단 admin/board_write.html, admin/board_view.html(댓글 ajax처리) 작업예정
+- 대시보드 home.html(최근 회원가입정보, 최근 게시물정보) 작업예정
+- 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root파일까지)로 배치
+- 스프링작업 시작
+
+#### 20210527(목) 작업
 - admin/board_list.html 부터 시작.
 - 관리자단 AdminLTE적용 - 지금 게시판CRUD, 대시보드 마무리 : html로 작업
 - 관리자단 기본 틀(템플릿) : 공통 UI 부분 작업
