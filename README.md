@@ -7,9 +7,15 @@
 - VS code에서 만든 UI를 이클립스 JSP로 변경 후 스프링 웹 프로젝트를 진행.
 - 관리자단 AdminLTE적용 - 스프링작업시 회원관리CRUD, 게시판생성관리CRUD : JSP로 작업
 
-#### 20210528(금) 작업예정
-- 관리자단 admin/board_write.html, admin/board_view.html(댓글 ajax처리) 작업예정
-- 대시보드 home.html(최근 회원가입정보, 최근 게시물정보) 작업예정
+#### 20210528(금) 작업
+- UI 트렌드용어 : 카드(트럼프)UI, 뱃지(명찰), 리본(이벤트표시)
+- 소스 인스펙션(소스분석);
+- 데이터를 전송할때 사용하는 문장=쿼리스트링(QueryString)은 시작을 ?로 한다: ?키=value&키=value
+- 뒤로가기 허용하면, 게시물 테러가 가능함(새로고침시 무한입력)
+- 뒤로가기를 허용하지 않게 페이지를 이동하는 방식(JS에서는 location.replace함수 사용)
+- 뒤로가기를 허용하는 함수(JS에서는 location.href = '' 사용)
+- 관리자단 admin/board_write.html, admin/board_view.html(댓글 ajax처리) 작업
+- 대시보드 home.html(최근 회원가입정보, 최근 게시물정보) 작업
 - 관리자단 AdminLTE적용 - 스프링 시간 | UI디자인 시간 선택 후 아래 작업진행예정
 - 회원관리 CRUD-html, 게시판 생성관리CRUD-html
 - 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root파일까지)로 배치
