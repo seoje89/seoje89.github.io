@@ -1,0 +1,12 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.display {
+    background-color: gray;
+    padding: 15px ;
+    width: 250px;
+    text-align: right;
+    font-size: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
