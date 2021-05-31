@@ -2,7 +2,7 @@ html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .display {
-    background-color: rgb(129, 123, 123);
+    background-color: rgb(173, 173, 173);
     padding: 15px ;
     width: 250px;
     text-align: right;
@@ -18,4 +18,11 @@ button {
     background-color: rgb(196, 196, 196);
     color: black;
     font-size: 20px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgba(168, 168, 168, 0.555);
+}
+button:active {
+    background-color: rgba(65, 65, 65, 0.548);
 }
