@@ -2,11 +2,20 @@ html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .display {
-    background-color: gray;
+    background-color: rgb(129, 123, 123);
     padding: 15px ;
     width: 250px;
     text-align: right;
     font-size: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+button {
+    padding: 10px;
+    width: 67px;
+    height: 45px;
+    margin-top: 10px;
+    background-color: rgb(196, 196, 196);
+    color: black;
+    font-size: 20px;
 }
