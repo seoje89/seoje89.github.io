@@ -1,6 +1,6 @@
-html {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+@charset "UTF-8";
+
+/* 출력화면 CSS처리 */
 .display {
     background-color: rgb(173, 173, 173);
     padding: 15px ;
@@ -10,6 +10,8 @@ html {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+/* //출력화면 CSS처리 */
+/* 공통버튼 CSS처리 */
 button {
     padding: 10px;
     width: 67px;
@@ -19,6 +21,8 @@ button {
     color: black;
     font-size: 20px;
 }
+/* //공통버튼 CSS처리 */
+/* 버튼 마우스 커서 효과 및 클릭시 효과 CSS 처리 */
 button:hover {
     cursor: pointer;
     background-color: rgba(92, 92, 92, 0.781);
@@ -26,3 +30,4 @@ button:hover {
 button:active {
     background-color: rgb(87, 87, 87);
 }
+/* //버튼 마우스 커서 효과 및 클릭시 효과 CSS 처리 */
