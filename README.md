@@ -7,10 +7,12 @@
 - VS code에서 만든 UI를 이클립스 JSP로 변경 후 스프링 웹 프로젝트를 진행.
 - 관리자단 AdminLTE적용 - 스프링작업시 회원관리CRUD, 게시판생성관리CRUD : JSP로 작업
 
-#### 20210601(화) 작업예정
+#### 20210601(화) 작업
 - ERD기준으로 게시판UI 마무리
-- 관리자단 AdminLTE적용 - 스프링 시간 | UI디자인 시간 선택 후 아래 작업진행예정
-- 회원관리 CRUD-html, 게시판 생성관리CRUD-html
+- 오늘부터 vs code -> 이클립스에서 작업
+- 관리자단 AdminLTE적용 - 스프링 시간 선택 후 아래 작업진행예정
+- 회원관리 CRUD-jsp, 게시판 생성관리CRUD-jsp
+- html을 분해(1개의 페이지를 2개로 분해, 1.header.jsp(메뉴를 공통), 2.footer.jsp(공통))
 - 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root파일까지)로 배치
 - 스프링작업 시작
 
