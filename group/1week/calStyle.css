@@ -1,31 +1,87 @@
 @charset "UTF-8";
 
+/* 계산기 외곽선 표시 */
+.main {
+    border: 2px solid rgb(110, 0, 253);
+    border-radius: 10px;
+}
+/* //계산기 외곽선 표시 */
+
+/* 계산기 가운데 정렬*/
+.main {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 /* 출력화면 CSS처리 */
 .display {
     background-color: rgb(173, 173, 173);
     padding: 15px ;
-    width: 250px;
+    width: 255px;
     text-align: right;
     font-size: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 /* //출력화면 CSS처리 */
+
 /* 공통버튼 CSS처리 */
 button {
+    display: inline-block;
     padding: 10px;
     width: 67px;
     height: 45px;
-    margin-top: 10px;
+    margin-top: 3px;
     background-color: rgb(196, 196, 196);
     color: black;
     font-size: 20px;
+    border-radius: 5px;
 }
 /* //공통버튼 CSS처리 */
+
+/* 기호버튼 CSS처리 */
+#r12 {
+    background-color: rgb(28, 11, 253);
+    color: white;
+}
+#r13 {
+    background-color: rgb(28, 11, 253);;
+    color: white;
+}
+#r24 {
+    background-color: rgb(28, 11, 253);;
+    color: white;
+}
+#r34 {
+    background-color: rgb(28, 11, 253);;
+    color: white;
+}
+#r44 {
+    background-color: rgb(28, 11, 253);;
+    color: white;
+}
+#r53 {
+    background-color: rgb(28, 11, 253);;
+    color: white;
+}
+#r54 {
+    background-color: rgb(28, 11, 253);;
+    color: white;
+}
+/* //기호버튼 CSS처리 */
+
+/* 하단버튼 모서리 둥글게 CSS 처리 */
+#r51 { border-bottom-left-radius: 10px;}
+#r54 { border-bottom-right-radius: 10px;}
+/* //하단버튼 모서리 둥글게 CSS 처리 */
+
 /* 버튼 마우스 커서 효과 및 클릭시 효과 CSS 처리 */
 button:hover {
     cursor: pointer;
-    background-color: rgba(92, 92, 92, 0.781);
+    background-color: rgba(12, 11, 11, 0.781);
 }
 button:active {
     background-color: rgb(87, 87, 87);
