@@ -1,0 +1,21 @@
+@charset "UTF-8";
+body {
+    display: flex;
+}
+
+.first {
+    border: 2px solid gray;
+    width: 1000px;
+    height: 130px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.second {
+    border: 2px solid gray;
+    width: 1000px;
+    height: 230px;
+    word-break: keep-all;
+    word-wrap: break-word;
+    padding: 10px;
+}
