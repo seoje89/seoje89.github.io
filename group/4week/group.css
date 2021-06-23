@@ -1,0 +1,8 @@
+@charset "UTF-8";
+.first {
+    border: 2px solid gray;
+    width: 600px;
+    height: 130px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
