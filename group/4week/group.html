@@ -25,8 +25,55 @@
                </script>
         </div>
         <div class="second">
-            <h2>두 숫자의 최대공약수, 최소공배수 구하기</h2>
+            <h2 style="padding-bottom: 10px; border-bottom: 2px solid gray;">두 숫자의 최대공약수, 최소공배수 구하기</h2>
+                <script>
+                    function gcdlcm(a, b) {
+                    var low=1;
+                    var high;
+                    var small=a;
+                    var i;
+                    
+                    if(a>b){small=b;}
+                    for(i=2;i<=small;i++) {
+                        if(a%i==0&&b%i==0) {
+                        low=i;
+                        break;
+                        }
+                    }
+                    
+                    var x=a/low;
+                    var y=b/low;
+                    
+                    high=x*y*low;
+                    var answer = [low,high];
+                    
+                        return answer;
+                    }
+                    
+                    document.write("9와 12의 최대공약수와 최소공배수는 " + gcdlcm(9,12) +" 이다");
+                </script>
+        </div>
+        <div class="third">
+            <h2 style="padding-bottom: 10px; border-bottom: 2px solid gray;">100 이하의 짝수,홀수 구하기</h2>
+                <script>
+                  document.write("100이하의 짝수는 : ");
+                   for(let i=1; i<=100; i++) {
+                       if(i%2===0) {
+                        document.write(" " + i);
+                       }
+                   }
+                </script>
+                <br>
+                <br>
+                <script>
+                   document.write("100이하의 홀수는 : ");
+                   for(let i=1; i<=100; i++) {
+                       if(i%2===1) {
+                        document.write(" " + i);
+                       }
+                   }
 
+                </script>
         </div>
     </div>
 </body>
